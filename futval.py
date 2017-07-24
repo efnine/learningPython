@@ -1,16 +1,15 @@
+# futval.py
+#   A program that to compute the value of an investment some time in the future
+
 def main():
-    print("Lets figure out how much money Raphael could have for Harvard if we contribute every year some consistent amount")
-    print()
+    print("This program calculates the future value of a 10 year investment")
     
-    annual_deposit = eval(input("How much money will you contribute per annum? "))
-    apr = eval(input("At what rate do you think the investment could grow? "))
-    time_horizon = int(input("How long will the investment be held for? "))
+    principal = eval(input("Enter the initial principal: "))
+    apr = eval(input("Enter the annual interest rate: "))
     
-    investment_value = 0
-    for i in range(time_horizon):
-        investment_value += annual_deposit
-        investment_value *= (1+apr)
+    for i in range(10):
+        principal = principal * (1 + apr)
         
-    print("After",time_horizon,"years, Raphael will likely have",'${:0,.2f}'.format(investment_value))
+    print("The value of the investment 10 years from now will be: ", principal)
     
 main()
