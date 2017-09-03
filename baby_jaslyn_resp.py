@@ -13,7 +13,7 @@ def main():
               
         investment_growth += annual_deposit
         investment_growth *= (1 + growth_rate)  
-        print(investment_growth)
+        #print(investment_growth)
         
     print("The value of the RESP investment",n_years,"years from now will be:",'${:,.2f}'.format(investment_growth))
     
