@@ -224,12 +224,36 @@ def read_board(board_file):
     file_name = board_file
     file_location = file_path + file_name
     opened_file = open(file_location,"r")
-    lines = opened_file.readline() #reads the entire file into memory a
+    words = opened_file.readlines() # reads the entire file into memory a
     
-    board_list = []
-    for i in range(len(lines)):
-        board_list.append(lines[i].strip())
-    #word_list = lines[0]
-    return lines
+    # First we have to clean the list of the "\n"
+    new_words_list = []
+    for i in range(len(words)):
+        cleaned_words = words[i].strip("\n")
+        new_words_list.append(cleaned_words)
+        #return new_words_list
+    
+    # Second we have to turn each char within each list element into a str
+    # Each list element must have its own line
+    char_list = []
+    for i in range(len(new_words_list)): # for every element in new_words_list
+        subject_word = new_words_list[i] # store the value of each word
+                
+        my_list = []
+        for i in range(len(subject_word)): # for every element in each word
+            #my_list.append(str(subject_word[i])) # give me a list with each char
+            my_list.append(str(subject_word[i])) # give me a list with each char
+            char_list.insert(i,my_list) # insert each list into a list
+        return char_list
 
-print(read_words("board1.txt"))
+        #print(read_board("board1.txt"))
+
+
+
+
+
+
+
+
+
+
