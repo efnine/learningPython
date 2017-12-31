@@ -1,6 +1,5 @@
 import pandas as pd
 import matplotlib
-
 #Q1
 """
 def merge(L):
