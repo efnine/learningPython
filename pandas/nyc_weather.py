@@ -38,7 +38,7 @@ print(df[df['temperature'] == df['temperature'].max()])
 print('\n')
 print(df[['day','temperature']][df['temperature'] == df['temperature'].max()]) # show me the date and temperature recorded on the hotttest (max) day
 print('\n')
-df.set_index('day', inplace = True) #inplace = True ensures the df is changed
+df.set_index('day', inplace = True) #inplace = True ensures the df is changed --- use reset_index to make it go back
 print(df.loc['1/5/2017'])
 
 
