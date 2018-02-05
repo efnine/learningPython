@@ -24,5 +24,4 @@ with pd.ExcelWriter('new_stocks.xlsx') as writer:
     
 os.system(r"open -a 'C:\Program Files (x86)\Microsoft Office\root\Office16\Microsoft Excel.app' 'C:\Users\danie\OneDrive\NON-PERSONAL\Education\Programming\dnPythonFiles\learningPython\pandas\new_stocks.xlsx'")
 
-#https://www.youtube.com/watch?v=-0NwrcZOKhQ&list=WL&index=4&t=1s
-# at the 19 minute mark
+# https://www.youtube.com/watch?v=EaGbS7eWSs0&list=PLeo1K3hjS3uuASpe-1LjfG5f14Bnozjwy&index=5
