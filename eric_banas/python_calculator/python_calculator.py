@@ -99,7 +99,7 @@ class Calculator():
         """What happens when the equal button is pressed"""
         
         
-        #/// Make sure a math button was clicked
+        # Make sure a math button was clicked
         if self.add_trigger or self.sub_trigger or self.mult_trigger or self.div_trigger:
                     
             if self.add_trigger:
@@ -114,7 +114,7 @@ class Calculator():
             print(self.calc_value, " ", float(self.entry_value.get()),
                                         " ", solution)
             
-            #/// Clear the entry box
+            # Clear the entry box
             self.number_entry.delete(0, 'end')
             self.number_entry.insert(0, solution)
         
@@ -195,7 +195,7 @@ class Calculator():
         
         
         # ------ 4th row ------ 
-        self.button_clear = ttk.Button(root, text='AC'+self.entry_value, 
+        self.button_clear = ttk.Button(root, text='AC', 
         command = lambda : self.number_entry.delete(0, 'end')).grid(row=4, column=0 )
 
         self.button0 = ttk.Button(root, text='0', 
